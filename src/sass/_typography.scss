@@ -1,0 +1,11 @@
+@use '../sass/variables' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+  color: $very-dark-desaturated-blue;
+}
+
+p {
+  font-family: 'Barlow' sans-serif;
+  color: $dark-grayish-blue;
+}

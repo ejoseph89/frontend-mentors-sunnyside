@@ -1,0 +1,149 @@
+@use '../../sass/index' as *;
+
+.cta-container {
+  display: flex;
+  
+
+  .cta-text {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      width: 14ch;
+      line-height: 1.25;
+      padding-bottom: 15px;
+    }
+    
+    p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.75;
+      padding-bottom: 20px;
+      width: 50ch;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-family: 'Fraunces', sans-serif;
+      text-decoration: none;
+      font-size: 14px;
+      color: black;
+      padding-left: 7px;
+      padding-right: 7px;
+
+      position: relative;
+
+      &::after {
+          position: absolute;
+          content: '';
+          height: 8px;
+          border-radius: 50px;
+          width: 100%;
+          background: $soft-blue-hover;
+          margin: 0 auto;
+          bottom: -1px;
+          left: 0;
+          z-index: -1;
+        }
+
+      &:hover {
+        &::after {
+          position: absolute;
+          content: '';
+          height: 7px;
+          border-radius: 50px;
+          width: 100%;
+          background: $soft-blue;
+          margin: 0 auto;
+          bottom: -1px;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
+    }
+
+
+  }
+
+  .cta-img {
+    width: 50%;
+    // background: url('../../assets/desktop/image-transform.jpg') no-repeat center center/cover;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.reverse {
+    flex-flow: row-reverse;
+  }
+
+.yellow-link {
+  background: $soft-yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .cta-container {
+    flex-direction: column-reverse;
+
+    .cta-text {
+      width: 80%;
+      margin: 0 auto;
+      padding: 80px 60px;
+      text-align: center;
+      h2 {
+        margin: 0 auto;
+        font-size: 30px;
+      }
+      p {
+        margin: 0 auto;
+        width: 30ch;
+        font-size: 18px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+
+    .cta-img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cta-container {
+    
+
+    .cta-text {
+      width: 70%;
+      margin: 0 auto;
+      padding: 80px 60px;
+      text-align: center;
+      h2 {
+        margin: 0 auto;
+        font-size: 20px;
+      }
+      p {
+        margin: 0 auto;
+        width: 25ch;
+        font-size: 14px;
+      }
+      a {
+        font-size: 16px;
+      }
+    }
+
+    .cta-img {
+      width: 100%;
+    }
+  }
+}
+

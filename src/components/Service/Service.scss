@@ -1,0 +1,40 @@
+@use '../../sass/index' as *;
+
+.service {
+  width: 50%;
+
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  .service-container {
+    
+    // padding: 275px 100px 20px;
+    padding: 60% 20% 10%;
+    
+    h3 {
+      font-size: 23px;
+      color: $dark-desaturated-cyan;
+    }
+    
+    p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding-top: 20px;
+      color: $dark-desaturated-cyan;
+      padding-bottom: 2 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .service {
+    width: 100%;
+
+    .service-container {
+      padding: 80% 10% 10%;
+    }
+  }
+}
